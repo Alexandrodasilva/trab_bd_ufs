@@ -1,8 +1,6 @@
 <?php
-$db_handle = pg_connect("host=database-1.cwnslzm6sfas.us-east-1.rds.amazonaws.com user=postgres password=atila1998");
-
 function detalha_produto(){
-    $db_handle = pg_connect("host=database-1.cwnslzm6sfas.us-east-1.rds.amazonaws.com user=postgres password=atila1998");
+    $db_handle = pg_connect("host=database.cdfwtenhuhmz.us-east-1.rds.amazonaws.com user=banco_dados dbname=postgres password=professorbd");
     $id = $_GET['id'];
     $query = "SELECT * FROM estoque.produtos WHERE id = $id";
     $result = pg_exec($db_handle, $query);
