@@ -9,7 +9,7 @@ function detalha_produto(){
         $categoria = pg_result($result, $row, 'categoria');
         $quantidade = pg_result($result, $row, 'quantidade');
         $valor_medio = pg_result($result, $row, 'valor_medio');
-        echo 'Id :'.$id.' <br> Nome: '.$nome.' <br> Categoria : '.$categoria.'<br> Quantidade: '.$quantidade.'<br> Valor Médio: R$ '.$valor_medio;
+        echo '<div id = "detalhes_produto"> Id :'.$id.' <br> Nome: '.$nome.' <br> Categoria : '.$categoria.'<br> Quantidade Disponível: '.$quantidade.'<br> Valor Médio: R$ '.$valor_medio.'</div>';
     }
 }
 
