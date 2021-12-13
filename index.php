@@ -24,6 +24,10 @@ function lista_produtos(){
     <title>Lista de produtos</title>
 </head>
 <body>
+    <header>
+        <h1> LOJA </h1>
+        <img src="mdn-logo-sm.png" alt="MDN logo">
+    </header>
     <div class="content"> 
         <h1 class="content-wap">Lista de produtos</h1>
         <ul id = "lista de produtos">
