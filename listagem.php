@@ -1,13 +1,18 @@
 <?php
 function lista_produtos(){
     $db_handle = pg_connect("host=database.cdfwtenhuhmz.us-east-1.rds.amazonaws.com user=banco_dados dbname=postgres password=professorbd");
-    $query = "SELECT * FROM estoque.produtos";
+    $query = "SELECT * FROM estoque.produtos";  
     $result = pg_exec($db_handle, $query);
     for ($row = 0; $row < pg_numrows($result); $row++) {
         $id =  pg_result($result, $row, 'id');
         $nome = pg_result($result, $row, 'nome');
         $categoria = pg_result($result, $row, 'categoria');
-        echo '<a href = "detalhes_produto.php?id='.$id.'"><li class = "produto" href = "detalhes_produto.php" >Id :'.$id.'<br> Nome: '.$nome.'<br> Categoria : '.$categoria.'</li></a>';
+
+        echo '<a><li class = "produto" href = "detalhes_produto.php"
+         >Id :'.$id.'<br> Nome: '.$nome.'<br> Categoria : '.
+         $categoria.'<br><a href="cadastro.php?id='.$id.'
+         "><button>atualizar</button></a><a href="remover.php?id='.$id.'
+         "><button>Remover</button></a></li></a>';
     }
 }
 
@@ -26,7 +31,9 @@ function lista_produtos(){
 <body>
     <header>
         <h1> LOJA </h1>
-        <img src="mdn-logo-sm.png" alt="MDN logo">
+        <form method="post" action="cadastro.php">
+            <button class="button" type="submit">Cadastrar novo produto</button>
+        </form>
     </header>
     <div class="content"> 
         <h1 class="content-wap">Lista de produtos</h1>

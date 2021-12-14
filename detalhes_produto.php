@@ -28,6 +28,7 @@ function detalha_produto(){
 <body>
     <div class="content"> 
         <h1 class="content-wap">Produto</h1>
+        <a href="listagem.php" ></>
         <?php  detalha_produto()?>
     </div>
     <script>

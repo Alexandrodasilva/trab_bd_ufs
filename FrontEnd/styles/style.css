@@ -36,3 +36,7 @@ div#detalhes_produto{
     background-color: #d8e0ed;
     text-align: center;
 }
+button{
+    cursor: pointer;
+    background-color: brown;
+}
