@@ -10,7 +10,7 @@ function lista_produtos(){
 
         echo '<a><li class = "produto" href = "detalhes_produto.php"
          >Id :'.$id.'<br> Nome: '.$nome.'<br> Categoria : '.
-         $categoria.'<br><a href="cadastro.php?id='.$id.$nome.'
+         $categoria.'<br><a href="cadastro.php?id='.$id.'
          "><button>atualizar</button></a><a href="remover.php?id='.$id.'
          "><button>Remover</button></a></li></a>';
     }
