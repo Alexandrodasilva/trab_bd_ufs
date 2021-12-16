@@ -1,3 +1,8 @@
+<?php
+    $db_handle = pg_connect("host=database.cdfwtenhuhmz.us-east-1.rds.amazonaws.com user=banco_dados dbname=postgres password=professorbd");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,16 +19,17 @@
     <div class="form-cadastro">
         <form action=".php" method="post">
             <div>
-                <label for="usuario">Usuário</label>
+                <label for="login">LOGIN</label>
                 <br>
-                <input type="text" name="nome" class="input" required />
+                <input type="text" name="login" class="input" required 
+                value="<?php echo $login?>"/>
             </div>
-            
             <br>
             <div>
                 <label for="senha">Senha:</label>
                 <br>
-                <input type="text"  class="input" id="msg">
+                <input type="password"  class="input" id="senha_login" required
+                value="<?php echo $senha?>"/>
             </div>
             <br>
             <div>

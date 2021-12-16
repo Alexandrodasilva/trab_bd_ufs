@@ -16,7 +16,8 @@
         $quantidade = $_POST['quantidade'];
         $valor_medio = $_POST['valor_medio'];
         $query = "UPDATE estoque.produtos SET nome = '$nome', categoria = '$categoria', quantidade = '$quantidade', valor_medio = '$valor_medio' 
-        WHERE id = '$id'";  
+        WHERE id = '$id'";
+        $result = pg_exec($db_handle, $query);  
         //code
     }
 ?>
@@ -36,7 +37,7 @@
         <h1 class="topo"> Cadastramento </h1>
     </header>
     <div class="form-cadastro">
-        <form action="inserir_cadastro.php" method="post">
+        <form action="atualizar()" method="post">
             <div>
                 <label for="Nome">Nome</label>
                 <br>
