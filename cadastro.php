@@ -6,8 +6,17 @@
     for ($row = 0; $row < pg_numrows($result); $row++) {
         $nome = pg_result($result, $row, 'nome');
         $categoria = pg_result($result, $row, 'categoria');
+        $quantidade = pg_result($result, $row, 'quantidade');
+        $valor_medio = pg_result($result, $row, 'valor_medio');
     }
-    function atulizar(){
+    function atualizar(){
+        $id = $_POST['id'];
+        $nome = $_POST['nome'];
+        $categoria = $_POST['categoria'];
+        $quantidade = $_POST['quantidade'];
+        $valor_medio = $_POST['valor_medio'];
+        $query = "UPDATE estoque.produtos SET nome = '$nome', categoria = '$categoria', quantidade = '$quantidade', valor_medio = '$valor_medio' 
+        WHERE id = '$id'";  
         //code
     }
 ?>
@@ -55,7 +64,23 @@
             </div>
             <br>
             <div>
-                <button class="button" type="submit">Cadastrar</button>
+                <label for="quantidade">quantidade:</label>
+                <br>
+                <input type="number" name="quantidade" class="input" required 
+                value="<?php echo $quantidade ?>"/>
+            </div>
+            <br>
+            <div>
+                <label for="valor_medio">valor medio:</label>
+                <br>
+                <input type="text" name="valor_medio" class="input" required 
+                value="<?php echo $valor_medio ?>"/>
+            </div>
+            <br>
+            <div>
+                <button class="button" type="submit">Cadastrar
+                <?php atualizar()?>
+                </button>
             </div>
         </form>
     </div>

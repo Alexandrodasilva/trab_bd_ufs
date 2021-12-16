@@ -7,10 +7,12 @@ function lista_produtos(){
         $id =  pg_result($result, $row, 'id');
         $nome = pg_result($result, $row, 'nome');
         $categoria = pg_result($result, $row, 'categoria');
+        $quantidade = pg_result($result, $row, 'quantidade');
+        $valor_medio = pg_result($result, $row, 'valor_medio');
 
         echo '<a><li class = "produto" href = "detalhes_produto.php"
          >Id :'.$id.'<br> Nome: '.$nome.'<br> Categoria : '.
-         $categoria.'<br><a href="cadastro.php?id='.$id.'
+         $categoria.'<br> quantidade: '.$quantidade.'<br> valor medio: '.$valor_medio.'<br><a href="cadastro.php?id='.$id.'
          "><button>atualizar</button></a><a href="remover.php?id='.$id.'
          "><button>Remover</button></a></li></a>';
     }
