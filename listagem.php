@@ -1,7 +1,7 @@
 <?php
 function lista_produtos(){
     $db_handle = pg_connect("host=database.cdfwtenhuhmz.us-east-1.rds.amazonaws.com user=banco_dados dbname=postgres password=professorbd");
-    $query = "SELECT * FROM estoque.produtos";  
+    $query = "SELECT * FROM estoque.produto";  
     $result = pg_exec($db_handle, $query);
     for ($row = 0; $row < pg_numrows($result); $row++) {
         $id =  pg_result($result, $row, 'id');
@@ -10,10 +10,10 @@ function lista_produtos(){
         $quantidade = pg_result($result, $row, 'quantidade');
         $valor_medio = pg_result($result, $row, 'valor_medio');
 
-        echo '<a><li class = "produto" href = "detalhes_produto.php"
+        echo '<a href = "detalhes_produto.php?id='.$id.'"><li class = "produto" href = "detalhes_produto.php"
          >Id :'.$id.'<br> Nome: '.$nome.'<br> Categoria : '.
          $categoria.'<br> quantidade: '.$quantidade.'<br> valor medio: '.$valor_medio.'<br><a href="cadastro.php?id='.$id.'
-         "><button>atualizar</button></a><a href="remover.php?id='.$id.'
+         "><button>Atualizar</button></a><a href="remover.php?id='.$id.'
          "><button>Remover</button></a></li></a>';
     }
 }
