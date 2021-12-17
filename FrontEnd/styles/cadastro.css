@@ -1,0 +1,41 @@
+header{
+    text-align: center;
+}
+h1{
+    color: #a31717;
+    text-shadow: black 1px 1px 1px;
+    font-family: "Pacifico", cursive;
+}
+h2.topo{
+    color: white;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #d3d3d3; 
+    background-image: url("../../plano-natal.jpg")
+}
+.form-cadastro {
+    margin: 0 auto;
+    width: 400px;
+}
+.input{
+    height: 25px;
+    width: 500px;
+}
+.input-especifico{
+    height: 100px;
+    width: 500px;
+}
+.button{
+    background-color: #97baf1;
+}
+
+div#fundo{
+    background-color: white;
+    width: 101.5%;
+    margin-left: -10px;
+    margin-top: -22px;
+    padding-top: 5px;
+    padding-bottom: 0.5px;
+
+}

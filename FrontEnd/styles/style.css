@@ -1,0 +1,70 @@
+body{
+    background-color: #d3d3d3; 
+    background-image: url("../../plano-natal.jpg")
+}
+
+h1{
+    color: #a31717;
+    text-shadow: black 1px 1px 1px;
+    font-family: "Pacifico", cursive;
+}
+
+a{
+    text-decoration: None;
+    color: black
+}
+
+a.href{
+    text-decoration: None;
+    color: Blue;
+}
+
+.content{
+    width: 600px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+.content-wap{
+    text-align: center;
+    color: white;
+    text-shadow: black 1px 1px 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.produto{
+    background-color: #00FFFF;
+    border-radius: 3px;
+    border-width: 3px;
+    border-color: #3bcccc;
+    list-style-type: none;
+    margin: 5px;
+    height: auto;
+    width: 100%;
+    padding: 10px 3px;
+    text-align:center;
+    box-shadow: black 1px 1px 1px;
+}
+
+li.produto:hover{
+    background-color: #d8e0ed;
+}
+
+div#detalhes_produto{
+    background-color: #d8e0ed;
+    text-align: center;
+}
+button{
+    cursor: pointer;
+    margin: 5 px;
+    background-color: white;
+}
+
+div#fundo{
+    background-color: white;
+    width: 101.5%;
+    margin-left: -10px;
+    margin-top: -22px;
+    padding-top: 5px;
+    padding-bottom: 0.5px;
+
+}
