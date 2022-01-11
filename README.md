@@ -24,4 +24,5 @@ Dupla:
   <img width="470" height="300" src="/img/cadastro_atualizar_categorias.png">
  </p>
 
+> Para o uso do sistema, foi necessáriio o uso de uma servidor para o php que usamos o xampp, o uso do do banco de dados que usamos pgAdmin com postgresSQL, além de HTML e CSS.
 
